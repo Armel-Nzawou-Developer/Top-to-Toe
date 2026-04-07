@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/assets/images/logo.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Top To Toe | Natural Beauty Salon</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#587797",
+              brandSecondary: "#959595",
+            },
+            fontFamily: {
+              fontHeading: ["Satisfy", "cursive"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      /* ================= TAILWIND CSS =================   */
+      @layer components {
+        .nav-link {
+          @apply font-bold border-transparent transition-colors duration-300 hover:border-sky-500 hover:text-sky-500 hover:border-b-4 hover:pb-2;
+        }
+        /* buttons*/
+        .nav-btn {
+          @apply bg-brand p-3 rounded-md text-white inline-block hidden md:block hover:bg-white hover:text-sky-500;
+        }
+        .hero-btn {
+          @apply bg-brand p-3 rounded-md text-white inline-block  hover:bg-white hover:text-sky-500;
+        }
+        .btn-price-list {
+          @apply mt-5  font-fontHeading text-brand bg-white p-3 rounded-md hover:bg-brand hover:text-white;
+        }
+
+        .flex-button {
+          @apply my-5 p-3 rounded-md min-w-[280px] bg-brand flex justify-between items-center gap-3;
+        }
+        .cta-btn {
+          @apply mt-5 p-6 bg-white rounded-full max-w-[300px] flex justify-center items-center gap-2;
+        }
+        /* buttons END*/
+
+        .why-us {
+          @apply p-10 bg-gray-300 font-bold md:gap-10 flex-wrap flex justify-center items-center md:flex;
+        }
+
+        .card {
+          @apply bg-white rounded-md p-10 min-h-[280px] w-[280px] flex flex-col items-center justify-center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- -------------------- NAVBAR--------------------  -->
+    <section class="header">
+      <nav class="relative container mx-auto p-6">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div>
+            <a href="index.html"
+              ><img
+                class="mx-auto block h-24"
+                src="/assets/images/logo.png"
+                alt="logo"
+              />
+            </a>
+          </div>
+          <!-- Menu Items -->
+          <div class="hidden md:flex flex space-x-10">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#treatments">Treatments</a>
+            <a class="nav-link" href="#latest-posts">Latest Posts</a>
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </div>
+
+          <!-- button -->
+          <a href="#bookings" class="nav-btn"> Book Now </a>
+          <!-- Hamburger Icon -->
+          <button
+            id="menu-btn"
+            class="block hamburger md:hidden focus:outline-none"
+          >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+          <div
+            id="menu"
+            class="flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+          >
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#treatments">Treatments</a>
+            <a class="nav-link" href="#latest-posts">Latest Posts</a>
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- -------------------- HERO --------------------  -->
+    <section
+      id="hero"
+      class="hero p-10 flex flex-col items-center justify-center"
+    >
+      <h1 class="welcome mb-5 text-4xl text-white self-center">Welcome To</h1>
+      <img
+        class="welcome-image h-[250px] mb-7"
+        src="./assets/images/logo.png"
+        alt=""
+      />
+      <!-- Booking button -->
+      <a class="hero-btn" href="#bookings">Book an appointment</a>
+    </section>
+
+    <!-- -------------------- WHY CHOOSE US--------------------  -->
+    <section id="why-us" class="why-us">
+      <div class="why-us-image b-white">
+        <img
+          class="border-8 h-64 bg-sky-100 border-radius-1"
+          src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="skin-care image"
+        />
+      </div>
+      <div class="why-us-text flex flex-col mt-5">
+        <h2 class="text-center text-3xl text-brand md:text-4xl">
+          Why Choose Us?
+        </h2>
+        <p class="mt-5">✓ Experienced Therapists</p>
+        <p class="mt-5">✓ Quality Products</p>
+        <p class="mt-5">✓ Relaxing Atmosphere</p>
+        <p class="mt-5">✓ Personalized Care in a Serene Setting</p>
+      </div>
+    </section>
+
+    <!-- -------------------- ABOUT--------------------  -->
+    <section id="about" class="about p-8 about flex flex-col items-center">
+      <h2
+        class="heading m-2 text-4xl text-semibold font-fontHeading text-brand"
+      >
+        ABOUT US
+      </h2>
+      <div
+        class="about-us-content p-4 flex justify-center items-center gap-10 md:flex flex-wrap-reverse"
+      >
+        <p class="about-text font-bold">
+          Top to Toe Natural Beauty Salon in Pinelands offers a range of<br />
+          professional beauty treatments from skincare and facials to nails,<br />
+          waxing, and permanent makeup in a relaxed, client-focused
+          environment.<br />
+        </p>
+        <img
+          class="about-us-image border-8 h-64 bg-sky-100 border-radius-1"
+          src="https://images.unsplash.com/photo-1633681926035-ec1ac984418a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="about-image"
+        />
+      </div>
+    </section>
+
+    <!-- -------------------- TREATMENTS--------------------  -->
+    <section
+      id="treatments"
+      class="treatments p-8 bg-gray-300 about flex flex-col items-center"
+    >
+      <h2
+        class="heading m-2 text-4xl text-semibold font-fontHeading text-brand"
+      >
+        TREATMENTS
+      </h2>
+      <p class="mt-5 text-md font-fontHeading text-brand">
+        We offer a range of beauty treatments.
+      </p>
+
+      <div
+        class="card-container mt-10 flex flex-wrap justify-center items-center gap-5"
+      >
+        <div class="card">
+          <img src="/assets/icons/skin-care-image.PNG" alt="" />
+          <h3 class="text-2xl">Skin Care</h3>
+          <p></p>
+          <summary class="space-x-10 mt-3">
+            <details>
+              <p>
+                - Facials<br />
+                - Environ Peel treatments <br />
+                - Environ DF Machine Treatments<br />
+              </p>
+            </details>
+          </summary>
+        </div>
+        <div class="card">
+          <img src="/assets/icons/lashes-image.PNG" alt="" />
+          <h3 class="text-2xl">Lashes</h3>
+          <p></p>
+          <summary class="space-x-10 mt-3">
+            <details>
+              <p>
+                - Lash & Brow Tinting<br />
+                - Lash Lift<br />
+                - Eyelash Extensions<br />
+              </p>
+            </details>
+          </summary>
+        </div>
+        <div class="card">
+          <img src="/assets/icons/hand-feet-image.PNG" alt="" />
+          <h3 class="text-2xl">Hands & Feet</h3>
+          <p></p>
+          <summary class="space-x-10 mt-3">
+            <details>
+              <p>
+                - Manicures & Pedicures <br />
+                - IBX <br />
+                - Gelish <br />
+                - Acrylic Nails
+              </p>
+            </details>
+          </summary>
+        </div>
+        <div class="card">
+          <img src="/assets/icons/waxing-image.PNG" alt="" />
+          <h3 class="text-2xl">Waxing</h3>
+          <p></p>
+          <summary class="space-x-10 mt-3">
+            <details>
+              <p>- Sunbed</p>
+            </details>
+          </summary>
+        </div>
+        <div class="card">
+          <img src="/assets/icons/make-up-image.PNG" alt="" />
+          <h3 class="text-2xl">Make up</h3>
+          <p></p>
+          <summary class="space-x-10 mt-3">
+            <details>
+              <p>
+                - Eyeliner and Lips<br />
+                - Shaded Brows <br />
+                - Semi-Permanent <br />
+                - Ear Piercing <br />
+              </p>
+            </details>
+          </summary>
+        </div>
+        <div class="card">
+          <img src="/assets/icons/micro-needling-image.PNG" alt="" />
+          <h3 class="text-2xl">Microneedling</h3>
+          <p></p>
+          <summary class="space-x-10 mt-3">
+            <details>
+              <p>
+                - Designed to stimulate maximum thickening of the skin, <br />
+                normalization and improvement of collagen and elastin
+              </p>
+            </details>
+          </summary>
+        </div>
+      </div>
+      <a
+        target="_blank"
+        href="/price-list/TopToToePriceList.pdf"
+        class="btn-price-list"
+      >
+        View Price list
+      </a>
+    </section>
+
+    <!-- -------------------- LATEST POSTS --------------------  -->
+    <section id="latest-posts" class="latest-posts">
+      <h2
+        class="heading mt-10 text-4xl text-semibold font-fontHeading text-brand flex justify-center items-center"
+      >
+        LATEST POSTS
+      </h2>
+      <p
+        class="mt-5 text-md font-fontHeading text-brand flex justify-center items-center"
+      >
+        Our latest Posts from Instagram.
+      </p>
+      <div
+        class="instagram-feed-widget flex flex-col justify-center items-center instagram-feed m-5 p-2 md:m-10"
+      >
+        <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div
+          class="elfsight-app-b906ad44-f951-4221-9fe7-7e81df291df0"
+          data-elfsight-app-lazy
+        ></div>
+      </div>
+    </section>
+
+    <!-- -------------------- CONTACT US --------------------  -->
+    <section id="contact" class="contact">
+      <div
+        class="contact-content bg-gray-900 px-6 py-24 sm:py-32 lg:px-8 flex flex-col justify-center items-center"
+      >
+        <div class="mx-auto max-w-2xl text-center">
+          <h2
+            class="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl"
+          >
+            Contact Us
+          </h2>
+          <p class="mt-2 text-lg/8 text-gray-400">
+            <br />
+            Have a question or need more information?<br />
+            Get in touch today! <br />
+            We will respond and assist, you as soon as possible.
+          </p>
+        </div>
+        <div
+          class="contact-info flex flex-wrap-reverse gap-10 justify-center items-center"
+        >
+          <!-- CONTACT US MAP -->
+          <div class="google-map m-5">
+            <iframe
+              class="min-w-[250px] h-[600px] md:w-[600px] md:h-[600px]"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.4437857080425!2d18.515409975711247!3d-33.929712273203435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5c8397b66d27%3A0x235bf8e944371c50!2sTop%20to%20Toe%20Natural%20Beauty%20Salon!5e0!3m2!1sen!2sza!4v1775498457746!5m2!1sen!2sza"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <!-- CONTACT US BUTTONS  -->
+          <div class="contact-buttons">
+            <div class="flex-button">
+              <div class="bg-white p-6 w-15 h-15 rounded-full text-center">
+                <img
+                  class="w-6 h-6"
+                  src="/assets/icons/instagram-image.png"
+                  alt="Instagram-icon"
+                />
+              </div>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/toptotoenaturalbeautysalon/"
+                class="text-center"
+                >Follow Us →</a
+              >
+            </div>
+            <div class="flex-button">
+              <div class="bg-white p-6 w-15 h-15 rounded-full text-center">
+                <img
+                  class="w-6 h-6"
+                  src="/assets/icons/facebook-image.png"
+                  alt="facebook-icon"
+                />
+              </div>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/toptotoepinelands/"
+                class="text-center"
+                >Follow Us →</a
+              >
+            </div>
+            <div class="flex-button">
+              <div class="bg-white p-6 w-15 h-15 rounded-full text-center">
+                <img
+                  class="w-6 h-6"
+                  src="/assets/icons/WhatsApp-image.png"
+                  alt="WhatsApp-icon"
+                />
+              </div>
+              <a
+                target="_blank"
+                href="https://wa.me/27835237739?text=Hello%21%20I%20would%20like%20to%20make%20an%20appointment%20with%20Top%20To%20Toe."
+                class="text-center"
+                >WhatsApp Us →</a
+              >
+            </div>
+            <div class="flex-button">
+              <div class="bg-white p-6 w-15 h-15 rounded-full text-center">
+                <img
+                  class="w-6 h-6"
+                  src="/assets/icons/email-image.png"
+                  alt="email-con"
+                />
+              </div>
+              <a
+                target="_blank"
+                href="mailto:toptotoepinelands@gmail.com"
+                class="text-center"
+                >Email Us →</a
+              >
+            </div>
+            <div class="flex-button">
+              <div class="bg-white p-6 w-15 h-15 rounded-full text-center">
+                <img
+                  class="w-6 h-6"
+                  src="/assets/icons/phone-image.png"
+                  alt="phone-icon"
+                />
+              </div>
+              <a target="_blank" href="tel:+215315829" class="text-center"
+                >Call Us →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------- BOOKINGS (CTA) --------------------  -->
+    <section
+      id="bookings"
+      class="bookings p-10 flex justify-center items-center"
+    >
+      <div
+        class="cta m-10 p-10 bg-brand rounded-xl min-w-full flex flex-col justify-center items-center"
+      >
+        <h1 class="text-white text-4xl mt-5">Bookings</h1>
+        <p class="text-2xl mt-5 text-white">
+          Ready to schedule an appointment?
+        </p>
+        <a
+          class="cta-btn"
+          target="_blank"
+          href="https://wa.me/27835237739?text=Hello%21%20I%20would%20like%20to%20make%20an%20appointment%20with%20Top%20To%20Toe."
+        >
+          <img
+            class="w-7 h-7"
+            src="/assets/icons/WhatsApp-image.png"
+            alt="whatsapp-icon"
+          />
+          <p class="text-brand">Start a conversation</p>
+        </a>
+        <em class="text-bold mt-5 text-white"
+          >Note: Any appointment not cancelled at least 24 hours in advance will
+          incur a fee.</em
+        >
+      </div>
+    </section>
+
+    <!-- -------------------- FOOTER--------------------  -->
+    <section
+      class="footer bg-brandSecondary p-10 flex flex-col justify-center items-between"
+    >
+      <div class="footer-navifation flex flex-wrap justify-between items-start">
+        <div class="footer-logo">
+          <a href="#"
+            ><img
+              class="max-w-48"
+              src="/assets/images/logo.png"
+              alt="footer-logo"
+          /></a>
+        </div>
+        <div class="navigation mt-2">
+          <h3 class="text-brand text-2xl font-bold">NAVIGATION</h3>
+          <ul class="text-white mb-5">
+            <a href="#"><li class="mb-2">Home</li></a>
+            <a href="#about"><li class="mb-2">About</li></a>
+            <a href="#treatments"><li class="mb-2">Treatments</li></a>
+            <a href="#latest-posts"><li class="mb-2">Latest Posts</li></a>
+            <a href="#contact"><li class="mb-2">Contact</li></a>
+            <a href="#bookings"><li class="mb-2">Booking</li></a>
+          </ul>
+        </div>
+        <div class="socials mt-2">
+          <h3 class="text-brand text-2xl font-bold">FOLLOW US</h3>
+          <div class="flex gap-2 mt-5">
+            <a
+              class="socials-btn bg-white p-6 w-15 h-15 rounded-full"
+              target="_blank"
+              href="https://www.instagram.com/toptotoenaturalbeautysalon/"
+              ><img
+                class="w-7 h-7"
+                src="/assets/icons/instagram-image.png"
+                alt="instagram-icon"
+            /></a>
+            <a
+              class="socials-btn bg-white p-6 w-15 h-15 rounded-full"
+              target="_blank"
+              href="https://www.facebook.com/toptotoepinelands/"
+              ><img
+                class="w-7 h-7"
+                src="/assets/icons/facebook-image.png"
+                alt="facebook-icon"
+            /></a>
+            <a
+              class="socials-btn bg-white p-6 w-15 h-15 rounded-full"
+              target="_blank"
+              href="https://wa.me/27835237739?text=Hello%21%20I%20would%20like%20to%20make%20an%20appointment%20with%20Top%20To%20Toe."
+              ><img
+                class="w-7 h-7"
+                src="/assets/icons/WhatsApp-image.png"
+                alt="whatsapp-icon"
+            /></a>
+            <a
+              class="socials-btn bg-white p-6 w-15 h-15 rounded-full"
+              target="_blank"
+              href="mailto:toptotoepinelands@gmail.com"
+              ><img
+                class="w-7 h-7"
+                src="/assets/icons/email-image.png"
+                alt="email-icon"
+            /></a>
+          </div>
+          <p class="mt-5 text-white text-bold">
+            Opening Hours: Mon : 1pm - 5pm | Tue - Fri : 8am - 5:30pm | Sat :
+            8am - 1pm
+          </p>
+          <p class="mt-5 text-white text-bold">
+            Physical Address: 44 Brookdale Ave, Pinelands Entrance on Glen Avon
+          </p>
+        </div>
+      </div>
+      <div
+        class="copyright mt-3 p-2 rounded-md flex flex-wrap justify-between items-center bg-brand"
+      >
+        <p class="mt-5 text-white text-bold">
+          © 2026 Top to Toe Natural Beauty Salon | All rights reserved.
+        </p>
+        <div>
+          <p class="mt-5 text-white text-bold">
+            Terms & Conditions | Design by<a
+              class="underline decoration-solid"
+              target="_blank"
+              href="https://armeldesign-solutions.web.app/"
+            >
+              ArmelDesign★</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>
