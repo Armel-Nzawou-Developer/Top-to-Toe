@@ -3,16 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap"
-      rel="stylesheet"
-    />
     <link rel="icon" href="./assets/images/logo.png" type="image/x-icon" />
-    <script src="https://cdn.tailwindcss.com"></script>
+      <title>Top To Toe | Natural Beauty Salon</title>
+    <!-- NATIVE CSS -->
     <link rel="stylesheet" href="./css/main.css" />
-    <title>Top To Toe | Natural Beauty Salon</title>
+    <!-- TAILWIND CDN (DEV ONLY) -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -45,15 +41,15 @@
           @apply mt-5  font-fontHeading text-brand bg-white p-3 rounded-md hover:bg-brand hover:text-white;
         }
 
-        .flex-button {
+        .contact-flex-btn {
           @apply my-5 p-3 rounded-md min-w-[280px] bg-brand flex justify-between items-center gap-3;
         }
         .cta-btn {
-          @apply mt-5 p-6 bg-white rounded-full max-w-[300px] flex justify-center items-center gap-2;
+          @apply mt-5 p-4 bg-white rounded-full max-w-[300px] flex justify-center items-center gap-2;
         }
         /* buttons END*/
 
-        .why-us {
+        .why-us-section {
           @apply p-10 bg-gray-300 font-bold md:gap-10 flex-wrap flex justify-center items-center md:flex;
         }
 
@@ -65,7 +61,7 @@
   </head>
   <body>
     <!-- -------------------- NAVBAR--------------------  -->
-    <section class="header bg-gray-400 ">
+    <section class="navbar bg-gray-400">
       <nav class="relative container mx-auto p-5">
         <div class="flex items-center justify-between">
           <!-- Logo -->
@@ -118,20 +114,16 @@
     <!-- -------------------- HERO --------------------  -->
     <section
       id="hero"
-      class="hero p-10 flex flex-col items-center justify-center"
+      class="hero-section p-10 flex flex-col items-center justify-center"
     >
-      <h1 class="welcome mb-5 text-4xl text-white self-center">Welcome To</h1>
-      <img
-        class="welcome-image h-[250px] mb-7"
-        src="./assets/images/logo.png"
-        alt=""
-      />
+      <h1 class="hero-text mb-5 text-4xl text-white self-center">Welcome To</h1>
+      <img class="h-[250px] mb-7" src="./assets/images/logo.png" alt="" />
       <!-- Booking button -->
       <a class="hero-btn" href="#bookings">Book an appointment</a>
     </section>
 
     <!-- -------------------- WHY CHOOSE US--------------------  -->
-    <section id="why-us" class="why-us">
+    <section id="why-us" class="why-us-section">
       <div class="why-us-image b-white">
         <img
           class="border-8 h-64 bg-sky-100 border-radius-1"
@@ -151,14 +143,17 @@
     </section>
 
     <!-- -------------------- ABOUT--------------------  -->
-    <section id="about" class="about p-8 about flex flex-col items-center">
+    <section
+      id="about"
+      class="about-section p-8 about flex flex-col items-center"
+    >
       <h2
         class="heading m-2 text-4xl text-semibold font-fontHeading text-brand"
       >
         ABOUT US
       </h2>
       <div
-        class="about-us-content p-4 flex justify-center items-center gap-10 md:flex flex-wrap-reverse"
+        class="p-4 flex justify-center items-center gap-10 md:flex flex-wrap-reverse"
       >
         <p class="about-text font-bold">
           Top to Toe Natural Beauty Salon in Pinelands offers a range of<br />
@@ -167,7 +162,7 @@
           environment.<br />
         </p>
         <img
-          class="about-us-image border-8 h-64 bg-sky-100 border-radius-1"
+          class="border-8 h-64 bg-sky-100 border-radius-1"
           src="https://images.unsplash.com/photo-1633681926035-ec1ac984418a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="about-image"
         />
@@ -177,7 +172,7 @@
     <!-- -------------------- TREATMENTS--------------------  -->
     <section
       id="treatments"
-      class="treatments p-8 bg-gray-300 about flex flex-col items-center"
+      class="treatments-section p-8 bg-gray-300 about flex flex-col items-center"
     >
       <h2
         class="heading m-2 text-4xl text-semibold font-fontHeading text-brand"
@@ -295,7 +290,7 @@
         Our latest Posts from Instagram.
       </p>
       <div
-        class="instagram-feed-widget flex flex-col justify-center items-center instagram-feed m-5 p-2 md:m-10"
+        class="instagram-feed-widget flex flex-col justify-center items-center m-5 p-2 md:m-10"
       >
         <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
         <script src="https://elfsightcdn.com/platform.js" async></script>
@@ -307,7 +302,7 @@
     </section>
 
     <!-- -------------------- CONTACT US --------------------  -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact-section">
       <div
         class="contact-content bg-gray-900 px-6 py-24 sm:py-32 lg:px-8 flex flex-col justify-center items-center"
       >
@@ -340,7 +335,7 @@
           </div>
           <!-- CONTACT US BUTTONS  -->
           <div class="contact-buttons">
-            <div class="flex-button">
+            <div class="contact-flex-btn">
               <div class="bg-white p-6 w-15 h-15 rounded-full text-center">
                 <img
                   class="w-6 h-6"
@@ -355,7 +350,7 @@
                 >Follow Us →</a
               >
             </div>
-            <div class="flex-button">
+            <div class="contact-flex-btn">
               <div class="bg-white p-6 w-15 h-15 rounded-full text-center">
                 <img
                   class="w-6 h-6"
@@ -370,7 +365,7 @@
                 >Follow Us →</a
               >
             </div>
-            <div class="flex-button">
+            <div class="contact-flex-btn">
               <div class="bg-white p-6 w-15 h-15 rounded-full text-center">
                 <img
                   class="w-6 h-6"
@@ -385,7 +380,7 @@
                 >WhatsApp Us →</a
               >
             </div>
-            <div class="flex-button">
+            <div class="contact-flex-btn">
               <div class="bg-white p-6 w-15 h-15 rounded-full text-center">
                 <img
                   class="w-6 h-6"
@@ -400,7 +395,7 @@
                 >Email Us →</a
               >
             </div>
-            <div class="flex-button">
+            <div class="contact-flex-btn">
               <div class="bg-white p-6 w-15 h-15 rounded-full text-center">
                 <img
                   class="w-6 h-6"
@@ -420,7 +415,7 @@
     <!-- -------------------- BOOKINGS (CTA) --------------------  -->
     <section
       id="bookings"
-      class="bookings p-10 flex justify-center items-center"
+      class="cta-section p-10 flex justify-center items-center"
     >
       <div
         class="cta m-10 p-10 bg-brand rounded-xl min-w-full flex flex-col justify-center items-center"
@@ -435,11 +430,11 @@
           href="https://wa.me/27835237739?text=Hello%21%20I%20would%20like%20to%20make%20an%20appointment%20with%20Top%20To%20Toe."
         >
           <img
-            class="w-7 h-7"
+            class="w-5 h-5"
             src="./assets/icons/WhatsApp-image.png"
             alt="whatsapp-icon"
           />
-          <p class="text-brand">Start a conversation</p>
+          <p class="text-brand">Start a chat</p>
         </a>
         <em class="text-bold mt-5 text-white"
           >Note: Any appointment not cancelled at least 24 hours in advance will
@@ -541,24 +536,27 @@
       </div>
     </section>
     <!-- Scroll to Top Button -->
-<button 
-  id="scrollTopBtn"
-  class="fixed bottom-6 right-6 z-50 hidden items-center justify-center w-12 h-12 rounded-full 
-         bg-gradient-to-r from-black to-brand text-white shadow-lg 
-         hover:scale-110 hover:shadow-xl active:scale-95 
-         transition-all duration-300 ease-in-out"
-  aria-label="Scroll to top"
->
-  <!-- Arrow Icon -->
-  <svg xmlns="http://www.w3.org/2000/svg" 
-       class="w-6 h-6" 
-       fill="none" 
-       viewBox="0 0 24 24" 
-       stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-          d="M5 15l7-7 7 7" />
-  </svg>
-</button>
+    <button
+      id="scrollTopBtn"
+      class="fixed bottom-6 right-6 z-50 hidden items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-black to-brand text-white shadow-lg hover:scale-110 hover:shadow-xl active:scale-95 transition-all duration-300 ease-in-out"
+      aria-label="Scroll to top"
+    >
+      <!-- Arrow Icon -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+    </button>
     <script src="js/script.js"></script>
   </body>
 </html>
