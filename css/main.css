@@ -11,26 +11,25 @@
 }
 
 :root {
-    --primary: #597795;
-    --primary-dark: #4a657f;
-    --accent: #BDC9C2;
-    --accent-strong: #8FAFA3;
-    --bg-main: #E6EEEC;
-    --bg-light: #F8FAF9;
-    --bg-beige: #EDE3D9;
-    --text-main: #2F3E46;
-    --text-secondary: #7A8A8F;
-    --white: #ffffff;
-    --shadow: rgba(0,0,0,0.05);
-  }
+  --primary: #597795;
+  --primary-dark: #4a657f;
+  --accent: #bdc9c2;
+  --accent-strong: #8fafa3;
+  --bg-main: #e6eeec;
+  --bg-light: #f8faf9;
+  --bg-beige: #ede3d9;
+  --text-main: #2f3e46;
+  --text-secondary: #7a8a8f;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.05);
+}
 html {
   scroll-behavior: smooth;
 }
 
-
 /* ================= NATIVE CSS =================   */
 .header {
-  border-bottom: 3px solid #ffff;
+  border-bottom: 4px solid #ffff;
   animation: fadeDown 1s ease forwards;
 }
 .welcome {
@@ -122,7 +121,7 @@ summary {
   left: 0;
   width: 24px;
   height: 2px;
-  background: black;
+  background: #ffff;
   transform: rotate(0px);
   transition: all 0.5s;
 }
