@@ -74,6 +74,11 @@ html {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
+/* Attach the fadeUp animation to the "mobile-menu-animation" class */
+.mobile-menu-animation {
+  animation: fadeUp 1s ease forwards;
+}
+
 /* ================= HERO ================= */
 .hero-section {
   border-bottom: 3px solid #ffff;
